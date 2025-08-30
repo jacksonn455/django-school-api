@@ -1,8 +1,13 @@
-# Django REST Framework: Building RESTful APIs
+# Django REST Framework: School System API
 
-This project is a simple RESTful API built using **Python** and **Django REST Framework (DRF)**. It demonstrates how to create models, serializers, views, and viewsets, as well as integrate Django Admin and implement authentication and permissions.
+This project is a simple RESTful API built using **Python** and **Django REST Framework (DRF)**, designed for a school system. It demonstrates how to create models, serializers, views, and viewsets, as well as integrate Django Admin and implement authentication and permissions.
+===============================================
 
----
+*Prerequisites* <br>
+- Python 3.x <br>
+- Django 4.2.11 <br>
+- Django REST Framework <br>
+- Markdown (for DRF browsable API support) <br>
 
 ## Features
 
@@ -12,56 +17,66 @@ This project is a simple RESTful API built using **Python** and **Django REST Fr
 - Add authentication and permission classes
 - Handle API root for better navigation
 
----
-
-## Requirements
-
-- Python 3.x
-- Django 4.2.11
-- Django REST Framework
-- Markdown (for DRF browsable API support)
-
----
-
 ## Setup Instructions
 
-## 1. Create a Virtual Environment
-
+```bash
+# Create a Virtual Environment
 python -m venv venv
+```
 
-## Activate the Virtual Environment
+```bash
+# Activate the Virtual Environment
 # Windows
-venv\Scripts\activate.bat
+vvenv\Scripts\activate.bat
 
 # macOS/Linux
 source venv/bin/activate
+```
 
-## Requirements
+```bash
+# Install Requirements
+pip install django==4.2.11
+pip install djangorestframework
+pip install markdown
+```
 
-- pip install django==4.2.11
-- pip install djangorestframework
-- pip install markdown
+```bash
+# Create Django Project
+django-admin startproject setup .
+```
 
+```bash
+# Create Django App
+python manage.py startapp school
+```
 
-## Create Django Project
-- django-admin startproject setup .
+```bash
+# Apply Migrations
+python manage.py makemigrations
+python manage.py migrate
+```
 
-## Create Django App
-- python manage.py startapp school
+```bash
+# Create Superuser
+python manage.py createsuperuser
+```
 
-## Apply Migrations
-- python manage.py makemigrations
-- python manage.py migrate
+```bash
+# Test Django Shell
+python manage.py shell
+```
 
-## Create Superuser
-- python manage.py createsuperuser
-
-## Test Django Shell
-- python manage.py shell
-
+```bash
 # Example imports
-- from school.models import Student
-- from school.serializers import StudentSerializer
+from school.models import Student
+from school.serializers import StudentSerializer
+```
 
+```bash
 # Create requirements.txt
-- pip freeze > requirements.txt
+pip freeze > requirements.txt
+```
+
+## Author
+ | [<img src="https://avatars1.githubusercontent.com/u/46221221?s=460&u=0d161e390cdad66e925f3d52cece6c3e65a23eb2&v=4" width=115><br><sub>@jacksonn455</sub>](https://github.com/jacksonn455) |
+  | :---: |
