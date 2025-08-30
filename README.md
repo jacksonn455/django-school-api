@@ -12,9 +12,11 @@ This project is a simple RESTful API built using **Python** and **Django REST Fr
 ## Features
 
 - Create models and serializers
-- Build API endpoints using ViewSets and Routers
-- Integrate Django Admin with your API
+- Build API endpoints using Views or ViewSets
+- When to use Views vs ViewSets
+- Implement Routers for route handling
 - Add authentication and permission classes
+- Integrate Django Admin with your API
 - Handle API root for better navigation
 
 ## Setup Instructions
@@ -75,6 +77,17 @@ from school.serializers import StudentSerializer
 ```bash
 # Create requirements.txt
 pip freeze > requirements.txt
+```
+
+## Example API Requests
+### List Students
+```bash
+curl -X GET http://127.0.0.1:8000/students/ -u username:password
+
+curl -X POST http://127.0.0.1:8000/students/ \
+-H "Content-Type: application/json" \
+-d '{"name":"John Doe","email":"john@example.com"}' \
+-u username:password
 ```
 
 ## Author
