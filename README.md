@@ -79,6 +79,11 @@ from school.serializers import StudentSerializer
 pip freeze > requirements.txt
 ```
 
+```bash
+# Run server
+python manage.py runserver
+```
+
 ## Example API Requests
 ### List Students
 ```bash
